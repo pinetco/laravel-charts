@@ -1,0 +1,47 @@
+{
+    "name": "pinetco/charts",
+    "description": "Laravel Chart Helpers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raviraj Chauhan",
+            "email": "raviraj@pinetco.com",
+            "homepage": "https://pinetco.com"
+        }
+    ],
+    "homepage": "https://github.com/pinetco/charts",
+    "keywords": [
+        "Laravel",
+        "Charts"
+    ],
+    "require": {
+        "illuminate/support": "~5|~6",
+        "nesbot/carbon": "^2.26"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pinetco\\Charts\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pinetco\\Charts\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pinetco\\Charts\\ChartsServiceProvider"
+            ],
+            "aliases": {
+                "Charts": "Pinetco\\Charts\\Facades\\Charts"
+            }
+        }
+    }
+}
