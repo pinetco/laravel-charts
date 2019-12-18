@@ -35,9 +35,9 @@ abstract class Chart
         $this->from = $from;
         $this->till = $till;
 
-        $this->dailyFormat = config('charts.formats.daily');
-        $this->weeklyFormat = config('charts.formats.weekly');
-        $this->monthlyFormat = config('charts.formats.monthly');
+        $this->dailyFormat = $this->dailyFormat ?: config('charts.formats.daily');
+        $this->weeklyFormat = $this->weeklyFormat ?: config('charts.formats.weekly');
+        $this->monthlyFormat = $this->monthlyFormat ?: config('charts.formats.monthly');
     }
 
     public function period(string $period)
